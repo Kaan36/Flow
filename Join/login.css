@@ -1,0 +1,132 @@
+:root {
+    --box-color: white;
+    --border-radius: 12px;
+    --border-color: green;
+    --border-left: 8px solid;
+    --bg-color: rgb(36, 36, 158);
+    --td-color: black;
+    --success-color: green;
+    --error-color: red;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    height: 95vh;
+    width: 95vw;
+}
+
+a {
+    color: white;
+}
+
+.login-container {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    min-width: 18vw;
+    height: 50vh;
+    border-radius: 12px;
+}
+
+.login-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 32px;
+}
+
+.login-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.login-body>:first-child {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+.login-body>:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+p {
+    margin-top: 0;
+}
+
+.input-fields {
+    outline: none;
+    border: 2px solid rgba(95, 58, 58, 0.2);
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+.login-button {
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.login-button:hover {
+    background-color: rgb(216, 216, 216);
+}
+
+.login-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.login-footer a {
+    margin-top: 12px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.form-hidden {
+    display: none;
+}
+
+.error {
+    border-color: var(--error-color);
+}
+
+.success {
+    border-color: var(--success-color);
+}
+
+.output-error-email {
+    text-align: center;
+    height: 12px;
+}
+
+.output-error-password {
+    text-align: center;
+    height: 12px;
+}

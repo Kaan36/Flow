@@ -1,0 +1,74 @@
+.join-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 52px;
+    background-color: var(--bg-color);
+    height: 100%;
+    width: 120px;
+}
+
+.join-logo {
+    margin-top: 32px;
+    width: 52px;
+    margin-bottom: 24px;
+    padding-left: 42px;
+}
+
+.join-bar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-link-box a {
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: large;
+    font-weight: 80px;
+}
+
+.join-link-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.join-link-box a {
+    padding-left: 42px;
+    border-left: 6px solid var(--bg-color);
+}
+
+.join-link-box a:hover {
+    border-left: 6px solid white;
+}
+
+.join-bar-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.profil-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 32px;
+    padding-left: 42px;
+}
+
+.profil-bar img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.profil-bar a {
+    margin-top: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: large;
+    font-weight: 80px;
+}

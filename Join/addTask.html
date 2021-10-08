@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <script src="includeHTML.js"></script>
+    <link rel="stylesheet" href="addTask.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <script src="./mini_backend.js"></script>
+    <script src="addTask.js"></script>
+    <script src="login.js"></script>
+</head>
+
+<body onload="init(); today()">
+
+    <div class="add-task-container" id="add-task-container">
+        <div w3-include-html="joinbar.html"></div>
+
+        <div class="add-task-box" id="add-task-box">
+            <div class="box-header">
+                <h1>Add Task</h1>
+                <h5 style="margin-top: 3px">Learning Management System Project</h5>
+            </div>
+            <div class="box-body">
+                <div class="box-body-left">
+                    <div class="title">
+                        <h4>TITLE</h4>
+                        <input id="input-title" class="input-title" type="text">
+                    </div>
+                    <div class="category">
+                        <h4>CATEGORY</h4>
+                        <select class="select-category" name="category" id="category">
+                            <option>Please choose a category</option>
+                            <option value="Management">Management</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Produkt">Produkt</option>
+                            <option value="Sale">Sale</option>
+                        </select>
+                    </div>
+                    <div class="description">
+                        <h4>DESCRIPTION</h4>
+                        <textarea id="textarea-description" class="textarea-description" name="textarea-description"
+                            rows="6" wrap="soft"> </textarea>
+                    </div>
+                </div>
+
+                <div class="box-body-right">
+                    <div class="due-date">
+                        <h4>DUE DATE</h4>
+                        <input class="date" id="date" type="date" value="1980-08-26">
+                    </div>
+                    <div class="urgency">
+                        <h4>URGENCY</h4>
+                        <select class="select-urgency" name="urgency" id="urgency">
+                            <option>Please choose a urgency</option>
+                            <option value="low">LOW</option>
+                            <option value="middle">MIDDLE</option>
+                            <option value="high">HIGH</option>
+                        </select>
+                    </div>
+                    <div class="assigned-to">
+                        <h4>ASSIGNED-TO</h4>
+                        <div class="assigned-to-box" id="assigned-to-box">
+                            <div class="profil-box">
+                                <div id="profil" class="profil">
+                                    <img src="./images/profile.jpg">
+                                    <span id="name">Bilgekaan Yilmaz</span>
+                                    <span id="email">bilgekaan.yilmaz36@gmail.com</span>
+                                </div>
+                                <a href="#">
+                                    <img src="./images/icon-plus.png">
+                                </a>
+                            </div>
+                            <div class="buttons">
+                                <button id="button-1" class="button-1">CANCEL</button>
+                                <button id="button-2" class="button-2" onclick="addTask()">CREATE TASK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>includeHTML();</script>
+</body>
+
+</html>
