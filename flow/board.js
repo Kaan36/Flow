@@ -1,6 +1,6 @@
-let currentTask;
-
 setURL('http://bilgekaan-yilmaz.developerakademie.com/smallest_backend_ever-master');
+
+let currentTask;
 
 async function init() {
     await downloadFromServer();
@@ -14,7 +14,7 @@ function allowDrop(ev) {
 }
 
 function drag(id) {
-    currentTask = allTasks[id];
+    currentTask = allTasks.find(e => e.id == id);
     console.log('currentTask:', currentTask);
 }
 

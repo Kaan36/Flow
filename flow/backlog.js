@@ -13,8 +13,8 @@ function loadValues() {
     taskRow.innerHTML = '';
     for (let i = 0; i < allTasks.length; i++) {
         taskRow.innerHTML += `
-        <tr>
-            <td class="td-assigned ${allTasks[i]['urgency']}">
+        <tr class="${allTasks[i]['urgency']}">
+            <td class="td-assigned">
                 <img src="./images/profile.jpg">
                 <div id="name-assigned" class="name-assigned">
                     <span>${allTasks[i]['name']}</span>

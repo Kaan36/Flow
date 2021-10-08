@@ -37,9 +37,9 @@ async function addTask() {
 }
 
 function taskValues() {
-    id = allTasks.length;
-    names = querySelector('#name').innerHTML;
-    email = document.getElementById('email').innerHTML;
+    id = Math.floor(Math.random() * 100);
+    names = currentUser[0]['name'];
+    email = currentUser[0]['email'];
     title = document.getElementById('input-title').value;
     category = document.getElementById('category').value;
     description = document.getElementById('textarea-description').value;

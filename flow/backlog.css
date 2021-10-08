@@ -1,9 +1,9 @@
 :root {
     --box-color: white;
-    --border-radius: 12px;
+    --border-radius: 6px;
     --border-color: green;
     --border-left: 8px solid;
-    --bg-color: rgb(36, 36, 158);
+    --success-color: #50a443;
     --td-color: black;
 }
 
@@ -18,16 +18,24 @@
 
 table {
     width: 100%;
-    color: var(--bg-color);
+    color: var(--success-color);
     font-weight: bold;
+}
+
+thead tr{
+    color: var(--success-color);
+    border: none;
 }
 
 tr {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-left: 12px;
     padding-right: 12px;
     margin-bottom: 16px;
+    background-color: rgba(214, 214, 214, 0.6);
+    border-radius: var(--border-radius);
+    border-left: var(--border-left);
 }
 
 .td-assigned-header {
@@ -49,8 +57,6 @@ tr {
 }
 
 .td-assigned {
-    border-left: var(--border-left);
-    border-radius: var(--border-radius);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -98,4 +104,16 @@ tr {
         flex-direction: column;
         align-items: flex-start;
     }
+}
+
+.low {
+    border-color: green !important;
+}
+
+.middle {
+    border-color: yellow !important;
+}
+
+.high {
+    border-color: red !important;
 }

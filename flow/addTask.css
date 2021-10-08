@@ -1,12 +1,13 @@
 :root {
     --box-height: 56px;
-    --box-width: 350px;
+    --box-width: 30vw;
     --box-font-size: 18px;
     --box-outline: none;
     --box-border-radius: 6px;
-    --box-border: 1px solid rgba(0, 0, 0, 0.2);
+    --box-border: 1px solid #50a443;
     --box-padding: 6px;
-    --bg-color: rgb(36, 36, 158);
+    --success-color: #50a443;
+    --input-color: rgba(0, 0, 0, 0.8);
 }
 
 body {
@@ -53,8 +54,12 @@ body {
     width: var(--box-width);
     font-size: var(--box-font-size);
     outline: var(--box-outline);
-    border: var(--box-border);
+    border: none;
     border-radius: var(--box-border-radius);
+    color: var(--input-color);
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgba(214, 214, 214, 0.6);
 }
 
 .select-category {
@@ -62,28 +67,40 @@ body {
     width: var(--box-width);
     font-size: var(--box-font-size);
     outline: var(--box-outline);
-    border: var(--box-border);
+    border: none;
     border-radius: var(--box-border-radius);
     cursor: pointer;
+    color: var(--input-color);
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgba(214, 214, 214, 0.6);
 }
 
 .textarea-description {
     width: var(--box-width);
     outline: var(--box-outline);
-    border: var(--box-border);
+    border: none;
     border-radius: var(--box-border-radius);
     font-size: var(--box-font-size);
     padding: var(--box-font-size);
     resize: none;
+    color: var(--input-color);
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgba(214, 214, 214, 0.6);
 }
 
 .date {
     height: var(--box-height);
     width: var(--box-width);
-    border: var(--box-border);
+    border: none;
     border-radius: var(--box-border-radius);
     font-size: var(--box-font-size);
     cursor: pointer;
+    color: var(--input-color);
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgba(214, 214, 214, 0.6);
 }
 
 .select-urgency {
@@ -91,9 +108,13 @@ body {
     width: var(--box-width);
     font-size: var(--box-font-size);
     outline: var(--box-outline);
-    border: var(--box-border);
+    border: none;
     border-radius: var(--box-border-radius);
     cursor: pointer;
+    color: var(--input-color);
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgba(214, 214, 214, 0.6);
 }
 
 h1 {
@@ -102,13 +123,15 @@ h1 {
     font-size: 20px;
 }
 
-h4, h5 {
-    color: var(--bg-color);
+h4 {
+    color: var(--success-color);
     font-weight: bold;
+    font-size: 20px;
 }
 
 h5 {
-    font-size: 10px;
+    font-size: 12px;
+    color: var(--success-color);
 }
 
 .assigned-to {
@@ -118,7 +141,7 @@ h5 {
 .button-1 {
     background-color: white;
     border: none;
-    color: var(--bg-color);
+    color: var(--success-color);
     padding: 15px 15px;
     text-align: center;
     text-decoration: none;
@@ -133,7 +156,7 @@ h5 {
 }
 
 .button-2 {
-    background-color: var(--bg-color);
+    background-color: var(--success-color);
     border: none;
     color: white;
     padding: 15px 15px;

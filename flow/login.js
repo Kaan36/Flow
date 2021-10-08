@@ -97,7 +97,7 @@ function initGuest() {
 
 async function guestLogIn() {
     let guest = {
-        'email': '',
+        'email': 'guest@test.de',
         'name': 'Guest',
         'password': '',
         'profile': './images/profile.jpg',
@@ -141,13 +141,18 @@ document.getElementById('linkLogin').addEventListener("click", () => {
 function checkInput() {
     document.querySelectorAll('.input-fields').forEach(inputElement => {
         inputElement.addEventListener('blur', () => {
-            if (inputElement.id == 'input-password-check' && inputElement.value.length < 5) {
+            if (isPasswordField(inputElement)) {
                 setPasswordError(inputElement, 'Password must be at least 5 characters in length');
             }
         });
 
         inputElement.addEventListener('input', () => {
             clearErrorMessage(inputElement);
-        })
-    })
+        });
+    });
+}
+
+
+function isPasswordField(inputElement){
+    return inputElement.id == 'input-password-check' && inputElement.value.length > 0 && inputElement.value.length < 5;
 }
