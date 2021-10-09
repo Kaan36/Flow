@@ -13,6 +13,15 @@ function allowDrop(ev) {
     ev.preventDefault();
 }
 
+function highlight(id){
+    document.getElementById(id).classList.add('highlight-area');
+}
+
+function removeHighlight(id){
+    document.getElementById(id).classList.remove('highlight-area');
+
+}
+
 function drag(id) {
     currentTask = allTasks.find(e => e.id == id);
     console.log('currentTask:', currentTask);

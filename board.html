@@ -25,25 +25,25 @@
         <div class="board-container" id="board-container">
             <div id="board-to-do" class="board-box">
                 <h3>TO DO</h3>
-                <div id="board-task-to-do" class="board-task" ondrop="moveTo('toDo')" ondragover="allowDrop(event)">
+                <div id="board-task-to-do" class="board-task" ondrop="moveTo('toDo')" ondragleave="removeHighlight('board-task-to-do')" ondragover="allowDrop(event); highlight('board-task-to-do')">
                    
                 </div>
             </div>
             <div id="board-progress" class="board-box">
                 <h3>IN PROGRESS</h3>
-                <div id="board-task-progress" class="board-task" ondrop="moveTo('progress')" ondragover="allowDrop(event)">
+                <div id="board-task-progress" class="board-task" ondrop="moveTo('progress')" ondragleave="removeHighlight('board-task-progress')" ondragover="allowDrop(event); highlight('board-task-progress')">
 
                 </div>
             </div>
             <div id="board-testing" class="board-box">
                 <h3>TESTING</h3>
-                <div id="board-task-testing" class="board-task" ondrop="moveTo('testing')" ondragover="allowDrop(event)">
+                <div id="board-task-testing" class="board-task" ondrop="moveTo('testing')" ondragleave="removeHighlight('board-task-testing')" ondragover="allowDrop(event); highlight('board-task-testing')">
 
                 </div>
             </div>
             <div id="board-done" class="board-box">
                 <h3>DONE</h3>
-                <div id="board-task-done" class="board-task" ondrop="moveTo('done')" ondragover="allowDrop(event)">
+                <div id="board-task-done" class="board-task" ondrop="moveTo('done')" ondragleave="removeHighlight('board-task-done')" ondragover="allowDrop(event); highlight('board-task-done')">
 
                 </div>
             </div>
