@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <script src="./mini_backend.js"></script>
+    <link rel="stylesheet" href="backlog.css">
+    <link rel="stylesheet" href="addTask.css">
+    <script src="backlog.js"></script>
+    <script src="includeHTML.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="init()">
+    <div class="add-task-container" id="add-task-container">
+        <div w3-include-html="joinbar.html"></div>
+
+        <div class="backlog-box" id="backlog-box">
+            <div class="box-header">
+                <h1>Backlog</h1>
+                <h5 style="margin-top: 3px">Learning Management System Project</h5>
+            </div>
+            <div class="backlog-box-body">
+                <table id="table" class="table">
+                    <thead>
+                        <tr>
+                            <td class="td-assigned-header">
+                                <h3></span>ASSIGNED TO</h3>
+                            </td>
+                            <td class="td-category-header">
+                                <h3>CATEGORY<h3>
+                            </td>
+                            <td class="td-details-header">
+                                <h3>DETAILS</h3>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody id="taskRow">
+                    
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>includeHTML();</script>
+</body>
+
+</html>

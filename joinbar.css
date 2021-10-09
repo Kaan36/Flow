@@ -1,0 +1,84 @@
+:root {
+    --box-color: white;
+    --border-radius: 12px;
+    --border-color: green;
+    --border-left: 8px solid;
+    --bg-color: rgb(255, 255, 255);
+    --td-color: black;
+    --success-color: #50a443;
+    --error-color: rgba(255, 0, 0, 0.548);
+}
+
+.join-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 42px;
+    background-color: transparent;
+    height: 100%;
+    width: 14vw;
+}
+
+.join-logo {
+    margin-top: 42px;
+    width: 100px;
+    margin-bottom: 42px;
+    padding-left: 42px;
+}
+
+.join-bar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.join-link-box a {
+    margin-top: 12px;
+    color: var(--success-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.join-link-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.join-link-box a {
+    padding-left: 42px;
+    border-left: 6px solid var(--box-color);
+}
+
+.join-link-box a:hover {
+    border-left: 6px solid var(--success-color);
+}
+
+.join-bar-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.profil-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 32px;
+    padding-left: 42px;
+}
+
+.profil-bar img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.profil-bar a {
+    margin-top: 12px;
+    color: var(--success-color);
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+}
