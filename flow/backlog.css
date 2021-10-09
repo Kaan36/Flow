@@ -1,0 +1,119 @@
+:root {
+    --box-color: white;
+    --border-radius: 6px;
+    --border-color: green;
+    --border-left: 8px solid;
+    --success-color: #50a443;
+    --td-color: black;
+}
+
+.backlog-box {
+    width: 85%;
+    margin-left: 12px;
+}
+
+.backlog-box-body {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+thead tr{
+    color: var(--success-color);
+    border: none;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 16px;
+    background-color: rgba(214, 214, 214, 0.6);
+    border-radius: var(--border-radius);
+    border-left: var(--border-left);
+}
+
+.td-assigned-header {
+    display: flex;
+    align-items: center;
+    width: 22%;
+}
+
+.td-category-header {
+    display: flex;
+    justify-content: center;
+    width: 22%;
+}
+
+.td-details-header {
+    display: flex;
+    justify-content: flex-end;
+    width: 32%;
+}
+
+.td-assigned {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--td-color);
+    overflow: hidden;
+    width: 22%;
+    word-break: break-all;
+}
+
+.td-assigned img {
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-right: 32px;
+}
+
+.td-category {
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--td-color);
+    word-break: break-all;
+}
+
+.td-details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 32%;
+    color: var(--td-color);
+    word-break: break-all;
+}
+
+.name-assigned {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+@media(max-width: 1400px) {
+    .td-assigned {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.low {
+    border-color: green !important;
+}
+
+.middle {
+    border-color: yellow !important;
+}
+
+.high {
+    border-color: red !important;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <script src="mini_backend.js"></script>
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body onload="init()">
+    <form id="login" class="login-container" onsubmit="logInUser(); return false;">
+        <div class="login-header">
+            <h1>flow</h1>
+            <img src="./images/flowIconBig.png">
+        </div>
+        <p id="output-error-email" class="output-error-email"></p>
+        <div class="login-body">
+            <input id="input-email-login" class="input-fields" placeholder="Email" type="email" required>
+            <input id="input-password-login" class="input-fields" placeholder="Password" type="password" required>
+        </div>
+        <p id="output-error-password" class="output-error-password"></p>
+        <div class="login-footer">
+            <button class="login-button">Login</button>
+            <a href="#" id="linkCreateAccount">Sign in</a>
+            <a href="#" id="linkGuest">Login as Guest</a>
+        </div>
+    </form>
+
+    <form id="createAccount" class="login-container form-hidden" onsubmit="createNewUser(); return false;">
+        <div class="login-header">
+            <h1>begin to flow</h1>
+            <img src="./images/flowIconBig.png">
+        </div>
+        <div class="create-body">
+            <input id="input-userName-create" class="input-fields" placeholder="Username" type="text" required>
+            <input id="input-email-create" class="input-fields" placeholder="Email" type="email" required>
+            <input id="input-password-check" class="input-fields" placeholder="Password" type="password" required>
+            <input id="input-password-create" class="input-fields" placeholder="Password" type="password" required>
+        </div>
+        <p id="output-error-sign-password" class="output-error-password"></p>
+        <div class="login-footer">
+            <button class="login-button">Sign in</button>
+            <a href="#" id="linkLogin">Login</a>
+        </div>
+    </form>
+
+    <script src="login.js"></script>
+</body>
