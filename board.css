@@ -54,7 +54,7 @@ h3 {
     border-top: 3px solid;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     cursor: pointer;
     width: 90%;
     word-wrap: break-word;

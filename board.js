@@ -13,11 +13,11 @@ function allowDrop(ev) {
     ev.preventDefault();
 };
 
-function highlight(id){
+function highlight(id) {
     document.getElementById(id).classList.add('highlight-area');
 };
 
-function removeHighlight(id){
+function removeHighlight(id) {
     document.getElementById(id).classList.remove('highlight-area');
 
 };
@@ -54,16 +54,7 @@ function loadToDo() {
 
     for (let i = 0; i < toDo.length; i++) {
         const element = toDo[i]
-        document.getElementById('board-task-to-do').innerHTML += `
-        <div id="task${element['id']}" class="task ${element['urgency']}" draggable="true" ondragstart="drag(${element['id']})">
-        <div class="task-elements">
-        <span>${element['dueDate']}</span>
-        <span>${element['title']}</span>
-        <span>${element['name']}</span>
-        </div>
-        <img style="width: 24px" src="./images/delete.png" onclick="deleteTask(${element['id']})">
-        </div>
-    `;
+        document.getElementById('board-task-to-do').innerHTML += generateBoardTask(element);
     };
 
 };
@@ -75,16 +66,7 @@ function loadInProgress() {
 
     for (let i = 0; i < inProgress.length; i++) {
         const element = inProgress[i];
-        document.getElementById('board-task-progress').innerHTML += `
-        <div id="task${element['id']}" class="task ${element['urgency']}" draggable="true" ondragstart="drag(${element['id']})">
-        <div class="task-elements">
-        <span>${element['dueDate']}</span>
-        <span>${element['title']}</span>
-        <span>${element['name']}</span>
-        </div>
-        <img style="width: 24px" src="./images/delete.png" onclick="deleteTask(${element['id']})">
-        </div>
-    `;
+        document.getElementById('board-task-progress').innerHTML += generateBoardTask(element);
     };
 };
 
@@ -95,16 +77,7 @@ function loadTesting() {
 
     for (let i = 0; i < testing.length; i++) {
         const element = testing[i];
-        document.getElementById('board-task-testing').innerHTML += `
-        <div id="task${element['id']}" class="task ${element['urgency']}" draggable="true" ondragstart="drag(${element['id']})">
-        <div class="task-elements">
-        <span>${element['dueDate']}</span>
-        <span>${element['title']}</span>
-        <span>${element['name']}</span>
-        </div>
-        <img style="width: 24px" src="./images/delete.png" onclick="deleteTask(${element['id']})">
-        </div>
-    `;
+        document.getElementById('board-task-testing').innerHTML += generateBoardTask(element);
     };
 };
 
@@ -115,18 +88,21 @@ function loadDone() {
 
     for (let i = 0; i < done.length; i++) {
         const element = done[i];
-        document.getElementById('board-task-done').innerHTML += `
-        <div id="task${element['id']}" class="task ${element['urgency']}" draggable="true" ondragstart="drag(${element['id']})">
-        <div class="task-elements">
-        <span>${element['dueDate']}</span>
-        <span>${element['title']}</span>
-        <span>${element['name']}</span>
-        </div>
-        <img style="width: 24px" src="./images/delete.png" onclick="deleteTask(${element['id']})">
-        </div>
-    `;
+        document.getElementById('board-task-done').innerHTML += generateBoardTask(element);
     }
 };
+
+function generateBoardTask(element) {
+    return ` <div id="task${element['id']}" class="task ${element['urgency']}" draggable="true" ondragstart="drag(${element['id']})">
+            <div class="task-elements">
+            <span>${element['dueDate']}</span>
+            <span>${element['title']}</span>
+            <span>${element['name']}</span>
+            </div>
+            <img style="width: 24px" src="./images/delete.png" onclick="deleteTask(${element['id']})">
+            </div>
+          `;
+}
 
 async function deleteTask(deleteId) {
     //let result = arrayRemove(array, deleteId);
